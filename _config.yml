@@ -4,7 +4,7 @@
 title: "testprojectsdotco"
 description: "Blog about test automation, qa, webdriver, performance, selenium"
 keywords: "automation, webdriver, amazon, aws, tests, performance"
-baseurl: "/personal"
+baseurl: ""
 #url: "/blog"
 #url: "http://127.0.0.1:4000"
 

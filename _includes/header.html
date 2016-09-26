@@ -1,0 +1,93 @@
+
+
+<div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar">ttt</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{"/" | prepend:site.baseurl }}">{{ site.title }}</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="{{"/blog/" | prepend:site.baseurl }}">{{ site.index.blog }}</a></li>
+
+                        {% if page.title == site.index.devops %}
+                            <li class="active">
+                        {% else %}
+                            <li>
+                        {% endif %}
+                            <a class="page-scroll" href="{{"/devops/" | prepend:site.baseurl }}">{{ site.index.devops }}</a></li>
+
+                        {% if page.title == site.index.automation %}
+                            <li class="active">
+                        {% else %}
+                            <li>
+                        {% endif %}
+                            <a class="page-scroll" href="{{ "/automation/" | prepend:site.baseurl }} ">{{ site.index.automation }}</a></li>
+
+                        {% if page.title == site.index.performance %}
+                            <li class="active">
+                        {% else %}
+                            <li>
+                        {% endif %}
+                            <a class="page-scroll" href="{{"/performance/" | prepend:site.baseurl }}">{{ site.index.performance }}</a></li>
+                        <!--
+                        {% if page.title == site.index.database %}
+                            <li class="active">
+                        {% else %}
+                            <li>
+                        {% endif %}
+                            <a class="page-scroll" href="{{"/database/" | prepend:site.baseurl}}">{{ site.index.database }}</a></li>
+                        -->
+                        {% if page.title == site.index.life %}
+                            <li class="active">
+                        {% else %}
+                            <li>
+                        {% endif %}
+                            <a class="page-scroll" href="/life/">{{ site.index.life }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</div>
+<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+        <li data-target="#inSlider" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                </div>
+                <div class="carousel-image wow zoomIn">
+                    <!-- <img src="static/img/landing/laptop.png" alt="laptop"/> -->
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back one"></div>
+
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back two"></div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

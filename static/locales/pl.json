@@ -1,0 +1,53 @@
+{
+  "website":{
+    "title": "Manfewer's blog"
+  },
+  "nav":{
+    "home": "Home",
+    "about_me": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "career": "Career",
+    "blog": "Blog",
+    "link": "Link"
+  },
+  "about_me":{
+    "about_me": "About Me",
+    "des": "Prosze sie uczyc jezykow obcych :) Tlumaczenie strony w toku ... I am an IT engineer, nuts about testing and automation. To me, life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful."
+  },
+  "skills":{
+    "my_skills": "My Skills"
+  },
+  "projects":{
+    "my_projects": "My Projects",
+    "pylot-regex": "The project is an extension to and a customization for Pylot; by adding the expression matching operations on the page source. The idea is that the matching text from the page source is reported in the final test results so one can test web performance, response time when things changing dynamically and at the same time get metrics from the web page",
+    "webber": "This automation framework is implemented on the top of Webdriver. The key features are: remote agents mode - tests run simultaneously on multiple (single) test agents; controlled by the test controller, agentless mode - tests run on the test controller, extensive reporting and logging, page test model"
+  },
+  "career":{
+    "my_career": "My Career",
+    "ammado": "ammado",
+    "ammado_des": "I started out as a Python automation engineer working with Selenium and over some many years I have become QA Lead, Automation Lead for Selenium/Webdriver/Appium, Performance Tester and DevOps for AWS",
+    "ammado_date": "Sept. 2009",
+    "ammado_job": "QA & DevOps",
+    "wedo": "WeDo Technologies",
+    "wedo_des": "Tested Unix systems, took a break from automation which only strengthened the belief that automation is a must in QA process  ",
+    "wedo_date": "Jun. 2008",
+    "wedo_job": "QA Engineer",
+    "xsil": "Xsil",
+    "xsil_des": "I learned the ropes of QA and became wild about automation, ISEB scored at 96 and cpompleted 6 modules at DIT (MSc in Computing)",
+    "xsil_date": "Sep. 2006",
+    "xsil_job": "Automation Engineer",
+    "college": "Graduation",
+    "college_des": "Graduated from university and as a Mechanical Design Engineer with the specialization of Computer Mechanics, I started my IT technology tour in Ireland.",
+    "college_date": "Jul. 2004",
+    "college_job": "Student"
+  },
+  "blog":{
+    "my_blog": "My Blog"
+  },
+  "link":{
+    "link": "Link",
+    "view": "views"
+  }
+
+}

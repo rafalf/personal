@@ -1,0 +1,56 @@
+# Welcome to Jekyll!
+
+# Website settings
+title: "testprojectsdotco"
+description: "Blog about test automation, qa, webdriver, performance, selenium"
+keywords: "automation, webdriver, amazon, aws, tests, performance"
+baseurl: "/personal"
+#url: "/blog"
+#url: "http://127.0.0.1:4000"
+
+# blog img path
+img_path: '/static/img/blog'
+
+# author
+author:
+  name: 'Rafal'
+  first_name: 'Rafal'
+  last_name: 'Fusik'
+  email: 'rafalfusik@gmail.com'
+  facebook_username: 'rafal.dublin'
+  linkedin_username: 'rafal-fusik-7a00195'
+  github_username: 'rafalf'
+  head_img: '/static/img/landing/me.jpg'
+
+# landing page
+landing:
+  home: 'Home'
+  about: 'About'
+  career: 'Career'
+  skills: 'Skills'
+  projects: 'Project'
+  blog: 'Blog'
+  link: 'Link'
+
+# blog index
+index:
+  home: 'Home'
+  blog: 'Blog'
+  devops: 'DevOps'
+  automation: 'Automation'
+  performance: 'Peformance'
+  life: 'Life'
+
+# google analytics
+ga:
+  id: UA-84740817-1
+
+# Build settings
+encoding: "utf-8"
+
+# other settings
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

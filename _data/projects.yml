@@ -1,0 +1,12 @@
+- name: 'pylot-regex'
+  i18n: 'pylot-regex'
+  url: '/rafalf/pylot-regular-exp-match'
+  img: '/static/img/landing/pylot-regex.jpg'
+  desc: 'The project is an extension to and a customization for Pylot; by adding the expression matching operations on the page source. The idea is that the matching text from the page source is reported in the final test results so one can test web performance, response time when things changing dynamically and at the same time get metrics from the web page'
+
+- name: 'webber'
+  i18n: 'webber'
+  url: '/rafalf/webber'
+  img: '/static/img/landing/webber.png'
+  desc: "This automation framework is implemented on the top of Webdriver. The key features are: remote agents mode - tests run simultaneously on multiple (single) test agents; controlled by the test controller, agentless mode - tests run on the test controller, extensive reporting and logging, page test model"
+

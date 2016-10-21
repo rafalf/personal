@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Instance provisioning: Download zipped files from S3 bucket during instance boostrap with PowerShell"
+title:  "Amazon instance provisioning: Download zipped files from S3 bucket during instance boostrap with PowerShell"
 date:   2016-10-04
 desc: "A quick post about downloading and extracting resources from S3 bucket"
 keywords: "amazon, aws, devops"
@@ -20,24 +20,28 @@ The process is carried out by injecting the user data script written in PowerShe
 
 ```
 Write-Host "Download from s3 bucket" -nonewline -ForegroundColor Green
-Read-S3Object -BucketName S3bucketName -Key whatToDownload -File WhereToDownload
+Read-S3Object -BucketName s3bucketName -Key downloadKey -File whereToDownload
   
 ```
 &nbsp;
 
-where
+where:
 
-__S3bucketName:__ bucket name to download from  
-__whatToDownload:__ file (key) to be downloaded  
-__WhereToDownload:__ destination directory   
+__s3bucketName:__ bucket name to download from  
+__downloadKey:__  file (key) to be downloaded  
+__whereToDownload:__ destination directory   
 
 __Example:__
-Read-S3Object -BucketName PrepScripts -Key NewRelicServerMonitor.zip -File C:\Prepscripts
 
-&nbsp;
+```
+Read-S3Object -BucketName PrepScripts -Key NewRelicServerMonitor.zip -File C:\PrepScripts
+```
+
+&nbsp;  
+
 ### Step 2: Extract 
 
-&nbsp;
+&nbsp;  
 
 ```
 Write-Host "Extract" -nonewline -ForegroundColor Green

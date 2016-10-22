@@ -17,9 +17,9 @@ This post is written under the assumption that Puppet msi, modules and manifests
 
 
 __When and why Puppet in the masterless configuration?__  
-* Because we don't need to worry about certificates
-* Because we don't need to look after the master node which could be another point of failure
-* When we don't need to push updates frequently after boxes are configured
+* Because we don't need to worry about certificates  
+* Because we don't need to look after the master node which could be another point of failure  
+* When we don't need to push updates frequently after boxes are configured  
 
 &nbsp;
 

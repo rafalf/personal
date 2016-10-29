@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "Appium: How to configure Appium for web apps on Android emulator running Safari with Python"
+title:  "Appium: How to configure Appium and Android emulator for testing web apps on Chrome browser with Python"
 date:   2016-10-20
-desc: "How to configure appium for testing web apps on Safari with Python"
+desc: "How to configure Appium and Android emulator for testing web apps on Chrome browser with Python"
 keywords: "appium, python, webdriver"
 categories: [Automation]
-tags: [Appium, Automation, Python]
+tags: [Appium, Automation, Python, Android]
 published: true
 ---
 
 
-Appium is an open source test automation framework for use with native, hybrid and mobile web apps. The aim of this post is to install Appium on Windows and get it running web app tests on Safari with Python. A short example of Python script will be provided at the very end of this post to test Facebook home page.
+Appium is an open source test automation framework for use with native, hybrid and mobile web apps. The aim of this post is to install Android emulator & Appium on Windows and get it running web app tests on Chrome. By the end of this post, we'll go through all steps required to get the tools installed that the Python test included in this post can be run to test briefly whether the Facebook home page is loaded or not in the browser.
 
 &nbsp;
 
@@ -45,7 +45,7 @@ Your emulator should be listed.
 Open admin cmd prompt and run the following command to install the .apk on your device:  
 
 ```
-adb install nameofyourapk.apk 
+adb install com.android.chrome_47.0.2526.83-252608310_minAPI16(x86)(nodpi).apk 
 ```
 Check if Chrome is installed on your emulator.
 
@@ -66,8 +66,74 @@ Now, to start Appium server simply run the command `appium`
 
 ### Step 8: Install Python client
 Install Python client ([source on github](https://github.com/appium/python-client)) from PyPi: `pip install Appium-Python-Client`  
-If you have it correctly set up, you should be able to run [this quick test](https://github.com/appium/python-client/blob/master/test/functional/android/chrome_tests.py)
+If you have it correctly set up, you should be able to run [this quick test](https://github.com/appium/python-client/blob/master/test/functional/android/chrome_tests.py) or jump straight to Step 9.
 
+
+### Step 9: Run fb test
+
+Run both tests:
+
+```
+#!/usr/bin/env python
+
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import unittest
+import time
+from appium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import TimeoutException
+from appium.webdriver.common.touch_action import TouchAction
+
+
+class FbChrome(unittest.TestCase):
+    def setUp(self):
+        
+        desired_caps = {
+            'platformName': 'Android',
+            'platformVersion': '5.1.1',
+            'deviceName': 'Android Emulator',
+            'browserName': 'Chrome'
+        }
+        self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+        
+    def tearDown(self):
+        self.driver.quit()
+
+    def test_pass(self):
+        self.driver.get('http://www.facebook.com')
+
+        try:
+            el = WebDriverWait(self.driver, 10).until(
+                lambda y: self.driver.find_element_by_id('u_0_2'), message='login panel did not appear')
+            el.send_keys('incorrect')
+        except TimeoutException as e:
+            self.fail(e)
+
+    def test_fail(self):
+        self.driver.get('http://www.facebook.com')
+
+        try:
+            el = WebDriverWait(self.driver, 2).until(
+                lambda y: self.driver.find_element_by_id('incorrectID'), message='login panel did not appear')
+        except TimeoutException as e:
+            self.fail(e)
+
+if __name__ == "__main__":
+    suite = unittest.TestLoader().loadTestsFromTestCase(FbChrome)
+    unittest.TextTestRunner(verbosity=2).run(suite)
+
+```
 
 
 

@@ -55,7 +55,7 @@ Open admin cmd prompt and run `uiautomatorviewer`. It's a tool that lets you ins
 Your device is all set! Now, it's time to install Appium ...
 
 ### Step 7: Install Node and npm tools
-[Download](https://nodejs.org/en/download/) and install.
+[Download](https://nodejs.org/en/download/) and install.  
 Open admin cmd prompt and run the command  
 
 ```
@@ -66,7 +66,7 @@ Now, to start Appium server simply run the command `appium`
 
 ### Step 8: Install Python client
 Install Python client ([source on github](https://github.com/appium/python-client)) from PyPi: `pip install Appium-Python-Client`  
-If you have it correctly set up, you should be able to run [this quick test](https://github.com/appium/python-client/blob/master/test/functional/android/chrome_tests.py) or jump straight to Step 9.
+If you have it correctly set up, you should be able to run [this quick test](https://github.com/appium/python-client/blob/master/test/functional/android/chrome_tests.py). You can also jump straight to Step 9 and run fb tests.
 
 
 ### Step 9: Run fb test

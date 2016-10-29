@@ -22,11 +22,11 @@ Appium is an open source test automation framework for use with native, hybrid a
 Download the latest JDK, install it and set _JAVA_HOME_. Add _bin_ directory to your PATH variable.  
 
 ### Step 2: Install Android SDK tool package  
-[Go to this site](https://developer.android.com/studio/index.html) and install the command line tool. Set _ANDROID_HOME_ environment variable as your Android SDK path. Additionally add the _tool_ and _platform-tools_ folders to your path variable.  
+[Go to the android developer site](https://developer.android.com/studio/index.html) and install the command line tool. Set _ANDROID_HOME_ environment variable as your Android SDK path. Additionally add the _tool_ and _platform-tools_ folders to your path variable.  
 
 ### Step 3: Install Intel Hardware Accelerated Execution Manager, Android Tools and API  
 Look inside Android SDK folder and start up SDK Manager.exe. Select all Tools, any top level API checkbox (one or all) that you want to use (make sure greater than 17), click on HAXM Installer in the extras section and install it. Be patient, it'll take some time to complete this task. Make sure that you have plenty of free space on your drive if you decide to install all APIs. Once installed go to the _SDK\extras\intel\Hardware_Accelerated_Execution_Manager_ and execute _intelhaxm-android.exe_.
-To troubleshot and resolve any issues related to HAXM [this post will help](http://stackoverflow.com/questions/26355645/error-in-launching-avd-with-amd-processor)  
+To troubleshot and resolve any issues related to HAXM [this stackoverflow post will help](http://stackoverflow.com/questions/26355645/error-in-launching-avd-with-amd-processor)  
 
 ### Step 4: Create Android virtual device  
 Again, look inside Android SDK folder, and start up AVD Manager.exe. It'll launch AVD manager.  
@@ -41,7 +41,7 @@ Your emulator should be listed.
 &nbsp;
 
 ### Step 5: Install Chrome  
-[Download](http://www.apkmirror.com/uploads/?q=chrome) .apk for your device (e.g. x86 - .47 [link](http://www.apkmirror.com/apk/google-inc/chrome/chrome-47-0-2526-83-release/) )  
+[Download chrome .apk for android](http://www.apkmirror.com/uploads/?q=chrome) (e.g. x86 - v.47 [link](http://www.apkmirror.com/apk/google-inc/chrome/chrome-47-0-2526-83-release/))  
 Open admin cmd prompt and run the following command to install the .apk on your device:  
 
 ```
@@ -55,7 +55,7 @@ Open admin cmd prompt and run `uiautomatorviewer`. It's a tool that lets you ins
 Your device is all set! Now, it's time to install Appium ...
 
 ### Step 7: Install Node and npm tools
-[Download](https://nodejs.org/en/download/) and install.  
+[Download node](https://nodejs.org/en/download/) and install.  
 Open admin cmd prompt and run the command  
 
 ```
@@ -66,7 +66,7 @@ Now, to start Appium server simply run the command `appium`
 
 ### Step 8: Install Python client
 Install Python client ([source on github](https://github.com/appium/python-client)) from PyPi: `pip install Appium-Python-Client`  
-If you have it correctly set up, you should be able to run [this quick test](https://github.com/appium/python-client/blob/master/test/functional/android/chrome_tests.py). You can also jump straight to Step 9 and run fb tests.
+If you have it correctly set up, you should be able to run [this quick Python test](https://github.com/appium/python-client/blob/master/test/functional/android/chrome_tests.py). You can also jump straight to Step 9 and run fb tests.
 
 
 ### Step 9: Run fb test

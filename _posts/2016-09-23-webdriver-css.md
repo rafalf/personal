@@ -26,11 +26,10 @@ Consider the following page source:
 </a>
 ```
 
-&nbsp;
-## To locate __a__ link element:
-&nbsp;
+## To locate __a__ link element:  
 
-### (sub-string matches )
+
+### (sub-string matches )  
 There are three special characters used:  
 ^ - starting text in the string   
 $ - ending text in the string  
@@ -62,9 +61,9 @@ href equals:
 a[href='https://support.zendesk.com/hc/articles/article2094904']
 ```
 
-&nbsp;
-## To locate __h2__ heading
-&nbsp;
+
+## To locate __h2__ heading  
+
 
 ### (sub-string matches )
 ```

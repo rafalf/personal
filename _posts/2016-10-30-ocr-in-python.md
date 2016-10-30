@@ -12,7 +12,7 @@ published: true
 
 While automating an app for my freelance job on Android, I stumbled upon an issue which I had to get around.
 In short, needed to verify Android toast messages which Appium due to the uiautomator limitations, cannot simply capture as of yet.
-The solution was to use OCR which I found out was very straight forward in Python.
+The solution was to use OCR which I found out was very straightforward in Python.
 
 &nbsp;
 
@@ -24,7 +24,7 @@ The solution was to use OCR which I found out was very straight forward in Pytho
 `pip install Pillow`
 
 ### Step 2: Install tesseract-ocr  
-[Download tesseratc-ocr from sourceforge](https://sourceforge.net/projects/tesseract-ocr-alt/files/) and install it. 
+[Download tesseract-ocr from sourceforge](https://sourceforge.net/projects/tesseract-ocr-alt/files/) and install it. 
 
 ### Step 3: Install pytesseract
 `pip install pytesseract` [pytesseract page](https://pypi.python.org/pypi/pytesseract/0.1)

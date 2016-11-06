@@ -26,7 +26,7 @@ Download the latest JDK, install it and set _JAVA_HOME_. Add _bin_ directory to 
 
 ### Step 3: Install Intel Hardware Accelerated Execution Manager, Android Tools and API  
 Look inside Android SDK folder and start up SDK Manager.exe. Select all Tools, any top level API checkbox (one or all) that you want to use (make sure greater than 17), click on HAXM Installer in the extras section and install it. Be patient, it'll take some time to complete this task. Make sure that you have plenty of free space on your drive if you decide to install all APIs. Once installed go to the _SDK\extras\intel\Hardware_Accelerated_Execution_Manager_ and execute _intelhaxm-android.exe_.
-To troubleshot and resolve any issues related to HAXM [this stackoverflow post will help](http://stackoverflow.com/questions/26355645/error-in-launching-avd-with-amd-processor)  
+To troubleshoot and resolve any issues related to HAXM [this stackoverflow post will help](http://stackoverflow.com/questions/26355645/error-in-launching-avd-with-amd-processor)  
 
 ### Step 4: Create Android virtual device  
 Again, look inside Android SDK folder, and start up AVD Manager.exe. It'll launch AVD manager.  
@@ -137,7 +137,16 @@ if __name__ == "__main__":
 
 
 
-
-
-
 &nbsp;
+
+
+### 10: Extras! Troubleshooting Android
+
+There will be times where you will need to troubleshoot Appium and Android. When it happens, `adb` comes handy to get Android logs e.g. to post an issue on github. First, we need to clean the logs by executing `adb -c`, followed by `adb logcat` to take the logs.
+
+__Happy testing!!__
+
+
+
+
+

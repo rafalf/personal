@@ -42,6 +42,9 @@ Your emulator should be listed.
 
 ### Step 5: Install Chrome  
 [Download chrome .apk for android](http://www.apkmirror.com/uploads/?q=chrome) (e.g. x86 - v.47 [link](http://www.apkmirror.com/apk/google-inc/chrome/chrome-47-0-2526-83-release/))  
+(UPDATE: 11/06/2016:)  
+appium 1.6.1 beta uses ChromeDriver version 2.25 and .apk version 47 will not work with it. com.android.chrome_54.* or any newer needs to be installed.
+
 Open admin cmd prompt and run the following command to install the .apk on your device:  
 
 ```
